@@ -1,0 +1,18 @@
+doctype html
+html(lang='en')
+    include ../common/head.pug
+    +head("Subjects")
+    body
+        script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js")
+        header
+            include ../common/navbar.pug
+            +navbar('', user)
+        .container
+            h1 Result
+            for item in ans
+                h1=item.idAnswer
+            for item in result
+                h1=item.idAnswer             
+        include ../common/footer.pug
+        +footer()
+        script(src='/javascripts/ajaxTest.js')
